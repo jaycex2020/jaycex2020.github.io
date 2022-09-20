@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>UIBlox Document</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="pandoc.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">UIBlox Document</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#actionbar" id="toc-actionbar">ActionBar</a>
+<ul>
+<li><a href="#specifications"
+id="toc-specifications">Specifications</a></li>
+<li><a href="#overview" id="toc-overview">Overview</a></li>
+<li><a href="#how-to-use" id="toc-how-to-use">How to Use</a></li>
+<li><a href="#optional-props" id="toc-optional-props">Optional
+Props</a></li>
+</ul></li>
+<li><a href="#basemenu" id="toc-basemenu">BaseMenu</a>
+<ul>
+<li><a href="#design-specifications"
+id="toc-design-specifications">Design Specifications</a></li>
+<li><a href="#overview-1" id="toc-overview-1">Overview</a></li>
+<li><a href="#how-to-use-1" id="toc-how-to-use-1">How to Use</a></li>
+<li><a href="#required-props" id="toc-required-props">Required
+Props</a></li>
+<li><a href="#optional-props-1" id="toc-optional-props-1">Optional
+Props</a></li>
+</ul></li>
+<li><a href="#button" id="toc-button">Button</a>
+<ul>
+<li><a href="#specifications-1"
+id="toc-specifications-1">Specifications</a></li>
+<li><a href="#overview-2" id="toc-overview-2">Overview</a></li>
+<li><a href="#how-to-use-2" id="toc-how-to-use-2">How to Use</a></li>
+<li><a href="#required-props-1" id="toc-required-props-1">Required
+Props</a></li>
+<li><a href="#optional-props-2" id="toc-optional-props-2">Optional
+Props</a></li>
+</ul></li>
+<li><a href="#contextualmenu" id="toc-contextualmenu">ContextualMenu</a>
+<ul>
+<li><a href="#design-specifications-1"
+id="toc-design-specifications-1">Design Specifications</a></li>
+<li><a href="#overview-3" id="toc-overview-3">Overview</a></li>
+<li><a href="#how-to-use-3" id="toc-how-to-use-3">How to Use</a></li>
+<li><a href="#required-props-2" id="toc-required-props-2">Required
+Props</a></li>
+<li><a href="#optional" id="toc-optional">Optional</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="actionbar">ActionBar</h1>
+<h2 id="specifications">Specifications</h2>
+<p>Design Spec: <a
+href="https://share.goabstract.com/e1bed6c8-fea3-441f-8890-61a16f8eb7ba">Abstract
+Spec</a></p>
+<h2 id="overview">Overview</h2>
+<p><code>ActionBar</code> holds up to two IconButtons and one
+PrimaryButton, and places itself at the bottom of its parent. It also
+can act as a container that is fixed at the bottom of its parent.</p>
+<h2 id="how-to-use">How to Use</h2>
+<p><code>ActionBar</code> will auto size to its parent’s width, and
+adjust its height based on its children. It can be put into the
+container together with other contents, and stay at the bottom of that
+container. <code>ActionBar</code>’s default style accepts 0 to 2
+IconButton props and exactly one PrimaryButton prop. Another way to use
+<code>ActionBar</code> is using it as a container, with no props but
+some children as contents.</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode lua"><code class="sourceCode lua"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">...</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> <span class="cn">R</span>oact<span class="op">.</span>createElement<span class="op">(</span><span class="cn">A</span>ctionBar<span class="op">,</span> <span class="op">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    button <span class="op">=</span> <span class="op">{</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        props <span class="op">=</span> <span class="op">{</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>            onActivated <span class="op">=</span> <span class="kw">function</span><span class="op">()</span> <span class="kw">end</span><span class="op">,</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>            text <span class="op">=</span> <span class="st">&quot;Button&quot;</span><span class="op">,</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>            icon <span class="op">=</span> <span class="cn">I</span>mages<span class="op">[</span><span class="st">&quot;icons/common/notificationOff&quot;</span><span class="op">],</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="op">},</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="op">},</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    enableButtonAtStart <span class="op">=</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    icons <span class="op">=</span> <span class="op">{</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>            props <span class="op">=</span> <span class="op">{</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>                anchorPoint <span class="op">=</span> <span class="cn">V</span>ector2<span class="op">.</span>new<span class="op">(</span><span class="dv">0.5</span><span class="op">,</span> <span class="dv">0.5</span><span class="op">),</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                position <span class="op">=</span> <span class="cn">UD</span>im2<span class="op">.</span>fromScale<span class="op">(</span><span class="dv">0.5</span><span class="op">,</span> <span class="dv">0.5</span><span class="op">),</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>                icon <span class="op">=</span> <span class="cn">I</span>mages<span class="op">[</span><span class="st">&quot;icons/common/notificationOff&quot;</span><span class="op">],</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>                userInteractionEnabled <span class="op">=</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>                onActivated <span class="op">=</span> <span class="kw">function</span><span class="op">()</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">print</span><span class="op">(</span><span class="st">&quot;Text Button Clicked!&quot;</span><span class="op">)</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>                <span class="kw">end</span><span class="op">,</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>                onStateChanged <span class="op">=</span> <span class="kw">function</span><span class="op">(</span>oldState<span class="op">,</span> newState<span class="op">)</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>                    <span class="fu">print</span><span class="op">(</span><span class="st">&quot;state changed </span><span class="sc">\n</span><span class="st"> oldState:&quot;</span><span class="op">,</span> oldState<span class="op">,</span> <span class="st">&quot; newState:&quot;</span><span class="op">,</span> newState<span class="op">)</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>                <span class="kw">end</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="op">})</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co">-- OR --</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> <span class="cn">R</span>oact<span class="op">.</span>createElement<span class="op">(</span><span class="cn">A</span>ctionBar<span class="op">,</span> <span class="op">{},</span> <span class="op">{</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  <span class="cn">C</span>hild <span class="op">=</span> <span class="cn">R</span>oact<span class="op">.</span>createElement<span class="op">(</span><span class="st">&quot;Frame&quot;</span><span class="op">)</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="op">})</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="op">...</span></span></code></pre></div>
+<h2 id="optional-props">Optional Props</h2>
+<ul>
+<li><p><code>button: table</code><br />
+See <a href="Button.md">Button</a> for required and optional
+props.</p></li>
+<li><p><code>enableButtonAtStart: boolean</code><br />
+Indicate whether the button should be rendered at start of the action
+bar</p></li>
+<li><p><code>icons: array</code></p>
+<ul>
+<li><code>props: table</code></li>
+<li>See <a href="IconButton.md">IconButton</a> for required and optional
+props.</li>
+</ul></li>
+<li><p><code>marginOverride: table</code><br />
+Overrides the inner margins of the action bar</p></li>
+<li><p><code>horizontalAlignment: Enum.HorizontalAlignment = Enum.HorizontalAlignment.Center</code><br />
+Overrides the horizontal alignment of the action bar contents. Default:
+center</p></li>
+</ul>
+<h1 id="basemenu">BaseMenu</h1>
+<h2 id="design-specifications">Design Specifications</h2>
+<p><a
+href="https://share.goabstract.com/02592c96-beca-47c6-9571-f9111b327071?">Abstract
+link</a></p>
+<h2 id="overview-1">Overview</h2>
+<p>A <code>BaseMenu</code> is a menu that contains a collection of
+cells.</p>
+<h2 id="how-to-use-1">How to Use</h2>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode lua"><code class="sourceCode lua"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cn">M</span>enu <span class="op">=</span> <span class="cn">R</span>oact<span class="op">.</span>createElement<span class="op">(</span><span class="cn">B</span>aseMenu<span class="op">,</span> <span class="op">{</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    buttonProps <span class="op">=</span> <span class="op">{</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>            icon <span class="op">=</span> <span class="cn">I</span>mages<span class="op">[</span><span class="st">&quot;component_assets/circle_17&quot;</span><span class="op">],</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>            text <span class="op">=</span> <span class="st">&quot;Option 1&quot;</span><span class="op">,</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>            onActivated <span class="op">=</span> <span class="kw">function</span><span class="op">()</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>                <span class="fu">print</span><span class="op">(</span><span class="st">&quot;Option 1 pressed&quot;</span><span class="op">)</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>            <span class="kw">end</span><span class="op">,</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="op">},</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>            icon <span class="op">=</span> <span class="cn">I</span>mages<span class="op">[</span><span class="st">&quot;component_assets/circle_17&quot;</span><span class="op">],</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>            text <span class="op">=</span> <span class="st">&quot;Option 2&quot;</span><span class="op">,</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>            keyCodeLabel <span class="op">=</span> <span class="cn">E</span>num<span class="op">.</span><span class="cn">K</span>eyCode<span class="op">.</span><span class="cn">T</span>ab<span class="op">,</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>            selected <span class="op">=</span> <span class="kw">false</span><span class="op">,</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>            onActivated <span class="op">=</span> <span class="kw">function</span><span class="op">()</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>                <span class="fu">print</span><span class="op">(</span><span class="st">&quot;Option 2 pressed&quot;</span><span class="op">)</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>            <span class="kw">end</span><span class="op">,</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>            iconColorOverride <span class="op">=</span> <span class="cn">C</span>olor3<span class="op">.</span>new<span class="op">(</span><span class="dv">1</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">),</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>            textColorOverride <span class="op">=</span> <span class="cn">C</span>olor3<span class="op">.</span>new<span class="op">(</span><span class="dv">1</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">),</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>        <span class="op">},</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>        <span class="op">{</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>            icon <span class="op">=</span> <span class="cn">I</span>mages<span class="op">[</span><span class="st">&quot;component_assets/circle_17&quot;</span><span class="op">],</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>            text <span class="op">=</span> <span class="st">&quot;Option 3&quot;</span><span class="op">,</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>            selected <span class="op">=</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>            onActivated <span class="op">=</span> <span class="kw">function</span><span class="op">()</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>                <span class="fu">print</span><span class="op">(</span><span class="st">&quot;Option 3 pressed&quot;</span><span class="op">)</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>            <span class="kw">end</span><span class="op">,</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>        <span class="op">},</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    <span class="op">},</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    width <span class="op">=</span> <span class="cn">UD</span>im<span class="op">.</span>new<span class="op">(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">300</span><span class="op">),</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    position <span class="op">=</span> <span class="cn">UD</span>im2<span class="op">.</span>fromScale<span class="op">(</span><span class="dv">0.5</span><span class="op">,</span> <span class="dv">0.5</span><span class="op">),</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    anchorPoint <span class="op">=</span> <span class="cn">V</span>ector2<span class="op">.</span>new<span class="op">(</span><span class="dv">0.5</span><span class="op">,</span> <span class="dv">0.5</span><span class="op">),</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    layoutOrder <span class="op">=</span> <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="op">})</span></span></code></pre></div>
+<h2 id="required-props">Required Props</h2>
+<ul>
+<li><p><code>buttonProps : table</code> <br> the properties for each
+cell. It is an array that contains multiple tables of the following
+format:</p>
+<ul>
+<li><p><code>text : string</code> <br> the label for the specific
+button</p></li>
+<li><p><code>onActivated : function</code> <br> the function that fires
+when the button is clicked</p></li>
+</ul>
+<p>### Optional</p>
+<ul>
+<li><p><code>icon : table or string</code> <br> an rbxasset address
+recognized by Roblox Studio or an ImageSet Image.</p></li>
+<li><p><code>keyCodeLabel : Enum.KeyCode</code> <br> a keycode to
+display a button hint for on the right side of the button</p></li>
+<li><p><code>inputBindingKey: string</code> <br> a string localization
+key pased into the gamepad input binding for use in a gamepad bottom
+bar</p></li>
+<li><p><code>selected : boolean</code> <br> a boolean value of if the
+cell is selected or not</p></li>
+<li><p><code>iconColorOverride : Color3</code> <br> a Color3 value to
+override the Icon ImageColor with</p></li>
+<li><p><code>textColorOverride : Color3</code> <br> a Color3 value to
+override the Text TextColor with</p></li>
+<li><p><code>disabled : boolean</code> <br> if the cell is disabled or
+not</p></li>
+</ul></li>
+</ul>
+<h2 id="optional-props-1">Optional Props</h2>
+<ul>
+<li><p><code>width : UDim = UDim.new(1, 0)</code> <br> the width of the
+menu</p></li>
+<li><p><code>position : UDim2 = UDim2.new(0, 0, 0, 0)</code> <br> the
+position of the menu</p></li>
+<li><p><code>anchorPoint : Vector2 = Vector2.new(0, 0)</code> <br> the
+anchor point of the menu</p></li>
+<li><p><code>layoutOrder : number = 0</code> <br> the layout order of
+the menu</p></li>
+</ul>
+<h1 id="button">Button</h1>
+<ul>
+<li><a href="#specifications">Specifications</a></li>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#how-to-use">How to Use</a></li>
+<li><a href="#required-props">Required Props</a></li>
+<li><a href="#optional-props">Optional Props</a></li>
+</ul>
+<h2 id="specifications-1">Specifications</h2>
+<p>Design Spec: <a
+href="https://share.goabstract.com/d09c057a-da58-4446-8c5e-2b78c59f255a">Abstract
+Spec</a>, <a
+href="https://www.figma.com/file/8hgTPZA9YeczRzj4w5uvPF/Buttons?node-id=469%3A93">Figma
+Spec for standard sizes</a></p>
+<h2 id="overview-2">Overview</h2>
+<p>There are 4 basic buttons * Primary Contextual Button * Primary
+System Button * Secondary Button * Alert Button</p>
+<p>Text and icon content type can be added any of the buttons * If icon
+is nil then it will be a text only button * If text is nil then it will
+be a icon only button * If text and icon are nil it will be a blank
+button * Else it will be a icon and text button</p>
+<h2 id="how-to-use-2">How to Use</h2>
+<p>Each of these buttons can be used with or without a standard size
+(Regular/Small/XSmall).</p>
+<p>Without a standard size: These buttons will auto size to the parent
+so the best way to use a button is to wrap it with a <code>Frame</code>
+and have the frame control the size and positioning of the button.</p>
+<p>With a standard size: Each standard size will apply the corresponding
+font style, padding, and button height for that standard size. These
+presets will override the <code>size</code> prop. The standard buttons
+can either fill their parent’s width by default, or have their width
+scale automatically to fit the text they contain. By default, Regular
+and Small buttons take the full size and XSmall buttons scale to fit
+content, but these defaults can be overridden with the
+<code>fitContent</code> prop. Regardless of this behavior, all standard
+buttons will never surpass a max width which is 640pts by default, but
+can be overridden with the <code>maxWidth</code> prop. If the text in
+any of these buttons is longer than its max width, or if the text in a
+Regular or Small button is wider than the parent container, the text
+will stay on one line but will be truncated at the end…</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode lua"><code class="sourceCode lua"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">...</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">return</span> <span class="cn">R</span>oact<span class="op">.</span>createElement<span class="op">(</span><span class="cn">P</span>rimaryContextualButton<span class="op">,</span> <span class="op">{</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    size <span class="op">=</span> <span class="cn">UD</span>im2<span class="op">.</span>new<span class="op">(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">144</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">48</span><span class="op">),</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    layoutOrder <span class="op">=</span> <span class="dv">1</span><span class="op">,</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    text <span class="op">=</span> <span class="st">&quot;Button&quot;</span><span class="op">,</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    isDisabled <span class="op">=</span> disabled<span class="op">,</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    isLoading <span class="op">=</span> loading<span class="op">,</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    onActivated <span class="op">=</span> <span class="kw">function</span><span class="op">()</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        <span class="fu">print</span> <span class="st">&quot;Primary Contextual Button Clicked!&quot;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">end</span><span class="op">,</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="op">})</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="op">...</span></span></code></pre></div>
+<h2 id="required-props-1">Required Props</h2>
+<ul>
+<li><code>onActivated: callback</code><br />
+Callback for the activated event.</li>
+</ul>
+<h2 id="optional-props-2">Optional Props</h2>
+<ul>
+<li><p><code>size: UDim2</code><br />
+The size of the button.</p></li>
+<li><p><code>standardSize: StandardButtonSize</code><br />
+The standard button size the button should use: Regular, Small, or
+XSmall.</p></li>
+<li><p><code>maxWidth: number</code><br />
+The maximum width in pts beyond which the button should not extend.
+(Standard buttons only.)</p></li>
+<li><p><code>fitContent: boolean</code><br />
+Whether the button width should be based on the text length. (Standard
+buttons only. Default depends on standard size.)</p></li>
+<li><p><code>anchorPoint: Vector2</code><br />
+The size of the button.</p></li>
+<li><p><code>position: UDim2</code><br />
+The size of the button.</p></li>
+<li><p><code>layoutOrder: number</code><br />
+The size of the button.</p></li>
+<li><p><code>icon: Image</code><br />
+The icon of the button. A Image is either a ImageSetData or URL
+string.</p></li>
+<li><p><code>text: string</code><br />
+The text of the button.</p></li>
+<li><p><code>inputIcon: Image</code><br />
+The icon of the controller input (A/B/X/Y button) needed to activate the
+button</p></li>
+<li><p><code>isDisabled: boolean = false</code><br />
+Is the button disabled.</p></li>
+<li><p><code>isLoading: boolean = false</code><br />
+Is the button loading.</p></li>
+<li><p><code>isHoverBackgroundEnabled: boolean = false</code><br />
+Determine whether hover background is enabled</p></li>
+<li><p><code>isDelayedInput: boolean = false</code><br />
+Is the button going to delay input.</p></li>
+<li><p><code>enableInputDelayed: boolean = false</code><br />
+Used to start the input delay, set to true when you want to start the
+animation.</p></li>
+<li><p><code>delayInputSeconds: number = 3</code><br />
+Amount of seconds to delay input</p></li>
+<li><p><code>userInteractionEnabled: boolean = true</code><br />
+A Boolean value that determines whether user events are ignored and sink
+input</p></li>
+<li><p><code>[React.Tag]: string</code><br />
+Forward React tags to the underlying GuiButton instance.</p></li>
+</ul>
+<h1 id="contextualmenu">ContextualMenu</h1>
+<h2 id="design-specifications-1">Design Specifications</h2>
+<p><a
+href="https://app.abstract.com/projects/6a298910-056a-11e9-ab69-db0f06009678/branches/master/collections/93b8658b-3981-49f4-9451-bec9e56eeca7">Abstract
+link</a></p>
+<h2 id="overview-3">Overview</h2>
+<p>A <code>DropdownMenu</code> is a Select component that contains a
+list of values. Users can open the Menu and select a value from the
+Menu’s Cells.</p>
+<p>The menu will be sized based on the <code>size</code> props. It
+contains a DropdownMenuList component to display the values. The
+DropdownMenuList will have the same width as the <code>size</code>
+props, and shows upon or under the DropdownMenuCell based on its
+absolute position relative to the <code>screenSize</code> props. If the
+<code>screenSize</code> has a width under 640pt, the DropdownMenuList
+will stick to the bottom of the <code>screenSize</code> with a 24pt
+padding. The dismiss modal background will be sized to the full screen
+size, independant of parent size.</p>
+<h2 id="how-to-use-3">How to Use</h2>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode lua"><code class="sourceCode lua"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cn">D</span>ropdownMenu <span class="op">=</span> <span class="cn">R</span>oact<span class="op">.</span>createElement<span class="op">(</span><span class="cn">D</span>ropdownMenu<span class="op">,</span> <span class="op">{</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  placeholder <span class="op">=</span> <span class="st">&quot;Make a Choice&quot;</span><span class="op">,</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  onChange <span class="op">=</span> <span class="kw">function</span><span class="op">(</span>value<span class="op">)</span> <span class="fu">print</span><span class="op">(</span>value<span class="op">)</span> <span class="kw">end</span><span class="op">,</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  size <span class="op">=</span> <span class="cn">UD</span>im2<span class="op">.</span>fromOffset<span class="op">(</span><span class="dv">300</span><span class="op">,</span><span class="dv">48</span><span class="op">),</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  screenSize <span class="op">=</span> <span class="cn">UD</span>im2<span class="op">.</span>fromOffset<span class="op">(</span><span class="dv">640</span><span class="op">,</span><span class="dv">800</span><span class="op">),</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  errorState <span class="op">=</span> <span class="kw">false</span><span class="op">,</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  showDropShadow <span class="op">=</span> <span class="kw">false</span><span class="op">,</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  fixedListHeight <span class="op">=</span> <span class="kw">nil</span><span class="op">,</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  cellDatas <span class="op">=</span> <span class="op">{</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>      text <span class="op">=</span> <span class="st">&quot;Item 1&quot;</span><span class="op">,</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">},</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>      text <span class="op">=</span> <span class="st">&quot;Item 2&quot;</span><span class="op">,</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="op">},</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>      text <span class="op">=</span> <span class="st">&quot;Item 3&quot;</span><span class="op">,</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="op">},</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>      text <span class="op">=</span> <span class="st">&quot;Item 4&quot;</span><span class="op">,</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    <span class="op">},</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>      text <span class="op">=</span> <span class="st">&quot;Item 5&quot;</span><span class="op">,</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    <span class="op">},</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>      text <span class="op">=</span> <span class="st">&quot;Item 6&quot;</span><span class="op">,</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>    <span class="op">},</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>      text <span class="op">=</span> <span class="st">&quot;Item 7&quot;</span><span class="op">,</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>    <span class="op">},</span></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>      text <span class="op">=</span> <span class="st">&quot;Item 8&quot;</span><span class="op">,</span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>    <span class="op">},</span></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a><span class="op">})</span></span></code></pre></div>
+<h2 id="required-props-2">Required Props</h2>
+<ul>
+<li><p><code>cellDatas : table</code> <br> the properties for each cell.
+It is an array that contains multiple tables of the following
+format:</p>
+<ul>
+<li><code>text : string</code> <br> the label for the specific
+button</li>
+</ul>
+<p>### Optional</p>
+<ul>
+<li><p><code>icon : table or string</code> <br> an rbxasset address
+recognized by Roblox Studio or an ImageSet Image.</p></li>
+<li><p><code>keyCodeLabel : Enum.KeyCode</code> <br> a keycode to
+display a button hint for on the right side of the button</p></li>
+<li><p><code>inputBindingKey: string</code> <br> a string localization
+key pased into the gamepad input binding for use in a gamepad bottom
+bar</p></li>
+<li><p><code>iconColorOverride : Color3</code> <br> a Color3 value to
+override the Icon ImageColor with</p></li>
+<li><p><code>textColorOverride : Color3</code> <br> a Color3 value to
+override the Text TextColor with</p></li>
+<li><p><code>disabled : boolean</code> <br> if the cell is disabled or
+not</p></li>
+</ul></li>
+<li><p><code>size : UDim2</code> <br> the size of the DropdownMenu,
+actually represents the DropdownMenuCell’s size and DropdownMenuList’s
+width.</p></li>
+<li><p><code>screenSize : Vector2</code> <br> the total size of the
+screen, used for the dismiss background and the DropdownMenuList’s
+position on the compact width.</p></li>
+<li><p><code>onChange : function</code> <br> a function to be called
+when a Cell is clicked , passing the value as a parameter. This will be
+called even if the value is the same with the previous one.</p></li>
+</ul>
+<h2 id="optional">Optional</h2>
+<ul>
+<li><p><code>isDisabled : boolean</code> <br> if the DropdownMenu is
+disabled.</p></li>
+<li><p><code>errorState : boolean</code> <br> if the DropdownMenu is in
+the error state.</p></li>
+<li><p><code>showDropShadow : boolean</code> <br> if the DropdownMenu’s
+DropdownMenuList’s frame has shadow effect.</p></li>
+<li><p><code>fixedListHeight : number</code> <br> if the DropdownMenu’s
+DropdownMenuList’s height with fixed number.</p></li>
+</ul>
+</body>
+</html>
